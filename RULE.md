@@ -564,4 +564,92 @@ Nếu cần khoảng cách khác nhau, có thể sử dụng:
 **Lý do**: Đảm bảo cách đoạn nhất quán và chuyên nghiệp trong tài liệu LaTeX  
 **Áp dụng cho**: Tất cả các đoạn văn trong tài liệu
 
+---
+
+## 10. Quy tắc Giải thích và Trích dẫn Khái niệm Mới
+
+### 10.1. Nguyên tắc Chung
+
+Khi **đề cập đến một khái niệm kỹ thuật, thuật ngữ chuyên môn, hoặc hiện tượng mới** lần đầu tiên trong tài liệu, **BẮT BUỘC** phải:
+1. **Giải thích ngắn gọn** ý nghĩa của khái niệm đó, HOẶC
+2. **Trích dẫn nguồn tài liệu** cho phép người đọc tìm hiểu thêm, HOẶC
+3. **Cả hai** (giải thích + trích dẫn) nếu khái niệm phức tạp
+
+### 10.2. Quy định Cụ thể
+
+**✅ Cần giải thích/trích dẫn:**
+- Thuật ngữ kỹ thuật tiếng Anh (LICQ, MFCQ, MPEC, NEP, etc.)
+- Hiện tượng/khái niệm chuyên ngành (duck curve, bounded rationality, etc.)
+- Phương pháp/kỹ thuật mới (smoothing, aggregation, etc.)
+- Điều kiện toán học (constraint qualification, complementarity, etc.)
+
+**❌ Không cần giải thích:**
+- Khái niệm đã được định nghĩa trước đó trong tài liệu
+- Thuật ngữ cơ bản mà đối tượng độc giả chắc chắn biết
+- Ký hiệu toán học chuẩn ($\min$, $\max$, $\nabla$, etc.)
+
+### 10.3. Ví dụ Minh họa
+
+#### ❌ **SAI** (Không giải thích, không trích dẫn):
+```latex
+Các điều kiện chính quy như LICQ hay MFCQ cũng cần thiết để đảm bảo 
+KKT là điều kiện cần cho tối ưu.
+```
+
+**Vấn đề:**
+- LICQ, MFCQ là gì? Người đọc không biết
+- Không có nguồn tham khảo để tìm hiểu thêm
+
+#### ✅ **ĐÚNG** (Có giải thích + trích dẫn):
+```latex
+Các điều kiện chính quy (constraint qualification) cũng cần thiết để 
+đảm bảo điều kiện KKT là điều kiện cần cho tối ưu \cite{MPECMethods2000}. 
+Hai điều kiện phổ biến nhất là LICQ (Linear Independence Constraint 
+Qualification) --- yêu cầu các gradient của ràng buộc tích cực phải 
+độc lập tuyến tính, và MFCQ (Mangasarian-Fromovitz Constraint 
+Qualification) --- điều kiện yếu hơn cho phép sự phụ thuộc tuyến tính 
+nhưng đòi hỏi tồn tại hướng khả thi nghiêm ngặt.
+```
+
+#### ✅ **ĐÚNG** (Hiện tượng với giải thích + trích dẫn):
+```latex
+...và hiện tượng duck curve (đường cong hình vịt) \cite{GameTheoreticEnergy2023} 
+--- đồ thị nhu cầu điện trong ngày có hình dạng con vịt do điện mặt trời 
+sản xuất dư thừa giữa trưa (tạo phần ``bụng vịt'') nhưng nhu cầu tăng 
+đột biến vào buổi tối khi mặt trời lặn (tạo phần ``cổ vịt'').
+```
+
+### 10.4. Cấu trúc Giải thích Chuẩn
+
+Khi giải thích một khái niệm, nên tuân theo cấu trúc:
+
+```
+[Tên khái niệm] ([Dịch nghĩa/viết tắt đầy đủ]) \cite{...} --- [giải thích ngắn gọn ý nghĩa].
+```
+
+**Ví dụ:**
+```latex
+bounded rationality (tính hợp lý hạn chế) \cite{BehavioralEcon2020} --- giả định 
+rằng người ra quyết định có giới hạn về thời gian, thông tin và năng lực tính toán.
+```
+
+### 10.5. Lý do
+
+- **Tính dễ hiểu**: Người đọc không cần tra cứu riêng
+- **Tính chính xác**: Đảm bảo định nghĩa nhất quán
+- **Tính học thuật**: Minh bạch nguồn gốc thông tin
+- **Tính tiếp cận**: Hỗ trợ người đọc có nền tảng khác nhau
+
+### 10.6. Checklist Tự Kiểm tra
+
+- [ ] Mọi thuật ngữ kỹ thuật tiếng Anh đều có giải thích hoặc viết tắt đầy đủ?
+- [ ] Mọi khái niệm chuyên môn đều có trích dẫn nguồn?
+- [ ] Hiện tượng/kỹ thuật đặc thù đã được giải thích ý nghĩa?
+- [ ] Giải thích ngắn gọn, đủ để người đọc hiểu được bản chất?
+
+---
+
+**Ngày cập nhật**: 2026-02-05  
+**Lý do**: Đảm bảo tính dễ hiểu và minh bạch học thuật khi trình bày khái niệm mới  
+**Áp dụng cho**: Tất cả thuật ngữ kỹ thuật, khái niệm chuyên môn, và hiện tượng mới trong tài liệu
 
